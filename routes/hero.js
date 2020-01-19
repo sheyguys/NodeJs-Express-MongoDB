@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 /* Add user */
 router.get('/add', function(req, res, next) {
-  res.send('Add Hero');
+  res.render('addhero');
 });
 
 /* Edit user */
