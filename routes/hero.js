@@ -11,14 +11,13 @@ router.get('/add', function(req, res, next) {
   res.render('addhero');
 });
 
-/* Edit user */
-router.get('/update', function(req, res, next) {
-  res.send('Add Hero');
-});
-
-/* Del user */
-router.get('/delete', function(req, res, next) {
-  res.send('Add Hero');
+/* Add user */
+router.post('/add', function(req, res, next) {
+  console.log(req.body.name)
+  console.log(req.body.agi)
+  console.log(req.body.str)
+  console.log(req.body.int)
+  console.log(req.body.description)
 });
 
 module.exports = router;
