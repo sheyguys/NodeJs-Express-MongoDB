@@ -12,6 +12,13 @@
     <%- include navbar %>
     <div class="container">
         <h2 align="center">ADD HERO</h2>
+        <% if(locals.errors) { %>
+        <ul class="alert alert-danger">
+            <% Object.values(errors).forEach(function(error){ %>
+                <li><%= error.msg %></li>
+            <% }) %>
+        </ul>
+        <% } %>
         <form class="" action="/hero/add" method="post">
             <div class="form-group">
                 <label for="">Hero Name</label>

@@ -22,7 +22,7 @@ router.post('/add',[
 ], function(req, res, next) {
   const response = validationResult(req);
   var errors = response.errors
-  if (!errors.isEmpty()) {
+  if (!response.isEmpty()) {
     res.render('addhero',{errors:errors});
   } else {
     //insert data to db
