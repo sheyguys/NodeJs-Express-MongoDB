@@ -34,11 +34,12 @@ router.post('/add', [
       agility: req.body.agi,
       strength: req.body.str,
       intelligence: req.body.int,
-      desscription: req.body.desscription
+      description: req.body.description
     }, function (err, hero) {
       if (err) {
         res.send(err);
       } else {
+        req.flash("error","Success");
         res.location('/hero/add');
         res.redirect('/hero/add');
       }
